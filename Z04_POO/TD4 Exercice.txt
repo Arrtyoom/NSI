@@ -1,0 +1,19 @@
+TD4 Question:
+1) 
+n, d, exp,
++  +  + +
++  -  - + 
+-  +  - +
+-  -  + + 
+
+3) 1/4 - 7/5 => 5/20 - 28/20 = 23/20
+
+4) a/b et c/d
+add=(a*d)/(b*d)+(c*b)/(d*b)
+sub=(a*d)/(b*d)-(c*b)/(d*b)
+mult=(a*c)/(d*b)
+div=(a*d)/(b*c)
+
+8) 
+pgdc(a,b) -> trouve les diviseur comment de a et b
+d'abord faire une fonction qui trouve les diviseurs comment puis une qui compare les diviseurs comment et/ou prenne le plus grand diviseur comment 

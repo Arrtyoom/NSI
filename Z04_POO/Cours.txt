@@ -1,0 +1,16 @@
+III.1 Interface d'une classe
+
+L'interface d'une classe decrit l'ensemble des attributs et méthodes accessibles à l'utilisateur.
+
+III.2 Encapsulation
+
+Pour qu'il ait encapsulation, l'utilisateur ne doit jamais modifier une instance sans passer par l'interface proposé
+
+compte.retirer(2000)
+=> la classe peut faire des vérifications(=> montant = 2000 ?)
+-> Bien 
+
+compte.montant -= 2000
+=> on casse l'encapsulation :
+pas de vérification possible!
+-> Pas Bien 

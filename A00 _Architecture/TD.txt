@@ -1,0 +1,15 @@
+Iphone (Apple)
+Modèle		Processeur	Format		Nb Coeur	Frequence
+Iphone 4	A4 ARM Cortex-A8 32bits		1		600MHz-11GHz
+Iphone 5	A6 ARMV7	40bits		2-4		1.2GHz
+Iphone 6	A8 ARMV8	64bits		4		1,38 GHz
+Iphone 8	A11 Bionic	64bits		2+4		2,06 GHz
+Iphone 11	A13 Bionic	64bits		4+2		2,65 GHz
+
+Galaxy Samsung 
+Modèle		Processeur	Format		Nb Coeur	Frequence
+S4		Snapdragon 600			4		1,9 GHz
+S6		Exynos 7420			4+4		1,5-2,1 GHz
+S8		Exynos 8895			4+4 		1.7-2.3GHz
+S11		Snapdragon 865
+S20		Exynos 990

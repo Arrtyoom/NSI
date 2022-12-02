@@ -1,0 +1,109 @@
+Exercice 1:
+
+1) C'est un graphe orienté/(pondéré)
+
+2)	 A : 3 - 0 =  3	
+         B : 2 - 1 =  1	
+	 D : 1 - 2 = -1	
+	 C : 0 - 3 = -3	
+			
+	     A  B  C  D
+	A [[ 0, 1, 1, 1],
+	B  [-1, 0, 1, 1],
+	C  [-1,-1, 0,-1],
+	D  [-1,-1, 1, 0]]
+
+sum(A)= 3
+sum(B)= 1
+sum(C)=-1
+sum(D)=-3
+
+
+	=> A et B sont qualifié 
+
+3) On regarde l'orientation des arcs et ont ajoute un point au predecesseur et on enlève un au successeur 
+
+nombre de points = nombre de succésseur - nombre de prédécesseur 
+
+
+Exercice 2:
+
+1) c'est un multigraphe etiqueté et orienté 
+2) SUSPENS
+3) SES
+4) Infini (à cause des boucles) 
+
+     1  2  3  4
+1 [[ 0, 1, 0, 0],
+2  [ 1, 2, 1, 0],
+3  [ 0, 0, 1, 1],
+4  [ 0, 0, 0, 0]]
+
+___________________________
+
+etiquettes = ['Z','I','E','T']
+graph =	[['I'],	    #Z
+	 ['T'],	    #I
+	 ['Z','T'], #E
+	 ['Z']]	    #T
+___________________________
+
+Exercice 4:
+
+1) M est une liste d'adjacent, les lettres de A a G sont les etiquettes, cette structure represente les sucesseurs de chaque point.
+2) 	Matrice d'adjacence = la diagonal principale est un axe de symetrie 
+	liste d'adjacence /(dictionnaire de dico/ set=en verifiant si) = si les etiquettes sont presence chez 	[a][b] et inversemment [b][a]
+	
+	A = orienté 
+	B = non-orienté
+	C = orienté 
+	graph = non-orienté
+	M = orienté
+	G = orienté
+
+3) C et G
+
+4) C (et G)
+
+6) parce que le sommet est quand meme present dans le graph
+
+7)
+G = {
+	"a" : {},
+	"b" : { "x" : 15 , f : 22 , d: 42 },
+	"x" : { "b" : 0 },
+	"f" : {},
+	"d" : { "f" : 2 },
+}
+
+Exercice 3:
+1) Il y a des boucles 
+2) dico = {
+1 : [1,2,3,4],
+2 : [2],
+3 : [5],
+4 : [3,4],
+5 : [3,5],
+}
+3) lst = [	#1,2,3,4,5
+		[1,1,1,1,0], #1
+		[0,1,0,0,0], #2
+		[0,0,0,0,1], #3
+		[0,0,1,1,0], #4
+		[0,0,1,0,1], #5
+	]
+4) le graphe n'est plus orienté
+5) lst = [	#1,2,3,4,5
+		[1,1,1,1,0], #1
+		[1,1,0,0,0], #2
+		[1,0,0,1,2], #3
+		[1,0,1,1,0], #4
+		[0,0,2,0,1], #5
+	]
+6) dico = {
+1 : {1:1,2:1,3:1,4:1},
+2 : {1:1,2:1},
+3 : {1:1,4:1,5:2},
+4 : {1:1,3:1,4:1},
+5 : {3:2,5:1},
+}

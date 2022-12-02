@@ -1,0 +1,11 @@
+"N-voisins"
+
+* Identifier les voisins ? => si on est en (x,y), les voisins sont :
+
+(x, y-1)	(x, y+1) 	(x-1, y)	(x+1, y)
+à Gauche	à Droite	en Haut		en Bas 
+
+* accéder à la valeur en (i,j) dans maze : maze[i][j]
+* somme des valeurs des 4 voisins 
+	=> une boucle ?
+	=> somme à la main des 4 valeurs

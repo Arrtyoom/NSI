@@ -1,0 +1,10 @@
+Exercice 2:
+
+Question 1:
+172.18.0.1
+Routeur A
+Routeur B 
+172.16.0.2
+
+Question 2:
+L'avantage de cette structure ce que la métrique ne va jamais depassé 1

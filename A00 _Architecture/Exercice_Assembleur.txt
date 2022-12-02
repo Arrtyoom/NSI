@@ -1,0 +1,39 @@
+Exercice 1:
+
+ADD R0, R1, #42
+r0 = r1 + 42
+
+LDR R5, 98
+chargé dans r5 la valeur de '98' dans la memoire
+
+1.CMP R4, #18
+2.BGT 77
+1.compare les valeurs de r4 avec 18
+2.si r4 est plus petit que 18 alors execute le code en memoir '77'
+
+STR R0, 15
+range la valeur de R0 dans la memoire '15'
+
+B 100 
+Prochaine instruction se situe en memoir vive a l'adresse '100'
+
+Exercice 2:
+
+2.1)ADD R5, R0, R1
+2.2)LDR R0, 878
+2.3)STR R0, 124
+2.4)B 478
+2.5)CMP R0, #42
+    BEQ 85
+
+Exercice 3:
+
+1. 
+x,y = 4,8
+si x est egal a 10:
+alors y = 9 
+sinon x+=1
+z=6
+
+2.
+x,y,z sont dans l'adresse memoire 30,75,23

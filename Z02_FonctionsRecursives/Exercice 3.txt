@@ -1,0 +1,10 @@
+1) 
+est_pair(2) = est_impair(1) = est_pair(0) = True
+est_impair(2) = ... = False
+est_pair(3)   = ... = False
+est_impair(0) = ... = False
+
+2) 
+couper : n-1
+régner : est_(im/)pair(n-1)
+combiner : ?

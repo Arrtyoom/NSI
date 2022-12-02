@@ -1,0 +1,42 @@
+Exercice 1
+
+1. La machine comporte 4 processeurs
+2. PID de la commande top : 11882
+3. le processus de PID 11181 est actif depuis 11h23:33 son statut est actif 
+4. le programme shutter utilise 2% du CPU
+5. la machine est active depuis 25 jours, 04:33:29
+6. Le Swap de la memoire est une memoire virtuel
+
+Exercice 2
+
+1. la librairie permet de manipuler les different processus de l'ordinateur via le language python 
+2. 
+from psutil import .sensors_temperatures
+print(psutil.sensors_temperatures())
+
+Exercice 3
+
+- renvoie la temperature du cpu
+- 
+- renvoie des information sur la battery
+
+Exercice 4
+
+- psutil.cpu_freq()
+- psutil.swap_memory()
+- psutil.disk_partitions()
+
+Exercice 5
+
+import psutil
+
+while True:
+    temp = psutil.cpu_times()
+
+    s = temp[0]
+    m,s = s//60 , s%60
+    h,m = m//60 , m%60
+
+    print(f"{int(h)}h{int(m)}:{int(s)}")
+
+Exercice 6

@@ -1,0 +1,21 @@
+Version 1:
+1) 
+n = lst[0]
+reste = lst[1:]
+n < min(reste):
+	return n
+return reste
+
+2) couper  : lst[1:]
+3) combiner: on compare le résultat de min(lst[1:]) avec lst[0] et on renvoie le plus petit
+4) cas de base: liste vide; on renvoie +infini (float('inf'))/(from math import inf)
+
+Version 2:
+6) la complexité en temps est de T(N) = O(N)[slice] + T(N+1)[appel recursif]
+=> T(N) = O(N²)
+7) 
+couper  : i+1
+regener : min(lst,i+1)
+combiner: comparer le résultat de régner avec lst[i]
+
+

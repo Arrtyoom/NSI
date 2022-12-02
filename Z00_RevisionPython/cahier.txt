@@ -1,0 +1,20 @@
+"N-voisins"
+
+* Identifier les voisins ? => si on est en (x,y), les voisins sont :
+
+(x, y-1)	(x, y+1) 	(x-1, y)	(x+1, y)
+à Gauche	à Droite	en Haut		en Bas 
+
+* accéder à la valeur en (i,j) dans maze : maze[i][j]
+* somme des valeurs des 4 voisins 
+	=> une boucle ?
+	=> somme à la main des 4 valeurs
+* /!\ Verifier que voisins est dans maze /!\
+________________
+
+Pour vendredi : 
+	1) finir la version avec les 4 conditions
+	2) remplacer les 4 conditions par des appels à une unique fonction "is_inside(maze,i,j)"
+	3) utiliser une boucle pour n'avoir qu'une condition écrite et une seule somme ecrite dans le code
+________________
+

@@ -1,0 +1,13 @@
+1)
+Les cas de base : "1 si n est nul" et "1 si n vaut 1"
+couper   : "n-2" et "n-1"
+régner   : "fib(n-2)" et "fib(n-1)"
+combiner : fib(n-2) + fib(n-1)
+
+4) il y a 15 appels de fonction 
+
+5) Dans fib(5) il y a 15 appels de fonction 
+et fib(4) en a 9. Vu que fib(6) = fib(5)+fib(4) alors il y a 15+9+1(fib(6))=25 appels de fonction 
+
+6) On voit que le temps de calcule devient très rapidement démesuré quand n augmente(peu...)
+
