@@ -1,0 +1,10 @@
+1) 
+piles = LIFO (last in first out)
+files = FIFO (first in first out)
+
+2)
+La Pile 
+
+3) mettre les variables de la file dans la pile et puis de la pile on depile dans la file 
+
+5) car on mute les variables donnés en argument et on n'en creer pas de nouvel
