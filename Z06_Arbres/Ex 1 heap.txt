@@ -1,0 +1,21 @@
+1) 	A) 
+	B) 
+2)
+A = [1,2,3,4,12,8,None]
+B = [1,2,4,12,42,None,None]
+
+3) 	E) Oui 
+	F) Oui
+
+6) 	#A tas.append(v)
+	#B i = len(tas) - 1
+	#C while True:
+	#F break
+
+7) 	#D j = (i - 1) // 2
+
+8) 	i == 0 verifie si on se situe a la racine
+	tas[j] <= tas[i] verifie si la valeur du noeud j est plus petite ou egal que la valeur du noeud i 
+
+9)	#G tas[j], tas[i] = tas[i], tas[j]
+	#H i = j
