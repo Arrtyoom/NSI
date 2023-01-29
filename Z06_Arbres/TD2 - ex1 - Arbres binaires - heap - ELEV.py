@@ -22,7 +22,7 @@ def insere(arr: [int], v: int) -> None:
     #     Fin Répéter
     # Fin Fonction
 
-    print(arr, v)
+    # print(arr, v)
     arr.append(v)
     i = len(arr) - 1
     while True:

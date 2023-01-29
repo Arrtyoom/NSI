@@ -1,11 +1,23 @@
 1) 	A) 
 	B) 
 2)
-A = [1,2,3,4,12,8,None]
-B = [1,2,4,12,42,None,None]
+A = [1,2,3,4,12,8]
+B = [1,2,4,12,42]
 
-3) 	E) Oui 
+3) 	E) Non
 	F) Oui
+
+	SAG: 2*i + 1
+	SAD: 2*i + 2
+
+4) arbre lineaire : on ajoute simplement l'element a la fin de la liste
+    => ".append(v)" => O(1)
+   "arbre arborescent" => au mieux on parcourt au moins la gauteur de l'arbre pour trouver le point d'insertion => O(h)
+   au pire on parcourt tt l'arbre => O(n)
+
+5)  1   -> 5    ->32
+                ->-3
+        -> 72
 
 6) 	#A tas.append(v)
 	#B i = len(tas) - 1

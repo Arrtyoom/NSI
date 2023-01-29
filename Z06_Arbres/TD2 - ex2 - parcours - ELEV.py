@@ -110,9 +110,7 @@ def fresh():
     return enterDungeon
 
 
-
 #*******************************************************************************
-
 
 
 def newbie(dungeon:Node):
@@ -156,13 +154,6 @@ def newbie(dungeon:Node):
             fileDAttente.enfile(noeudActuel.left)
             fileDAttente.enfile(noeudActuel.right)
             noeudActuel = fileDAttente.defile()
-
-
-
-
-
-
-
 
 
 def newbie_details(dungeon:Node):
@@ -211,14 +202,6 @@ def newbie_details(dungeon:Node):
             indiceActuel, valeurActuel = fileDAttente.defile()
 
 
-
-
-
-
-
-
-
-
 def diehard(dungeon:Node):
     """ Comme newbie, mais renvoie cette fois le message de la mort ayant lieu
         le plus tard possible (si plusieurs réponses sont possibles, prendre
@@ -264,17 +247,6 @@ def diehard(dungeon:Node):
         fileDAttente.enfile((indiceActuel+1, valeurActuel.left))
         fileDAttente.enfile((indiceActuel+1, valeurActuel.right))
         indiceActuel, valeurActuel = fileDAttente.defile()
-
-
-
-
-
-
-
-
-
-
-
 
 
 def diehard_left(dungeon:Node):
