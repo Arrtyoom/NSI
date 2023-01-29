@@ -207,65 +207,45 @@ def diehard(dungeon:Node):
         le plus tard possible (si plusieurs réponses sont possibles, prendre
         celle le plus à droite de l'arbre).
     """
-    def show(dungeon):
-        print(f"""
-        {dungeon.value}
-        {dungeon.msg}
-        L:{dungeon.left}
-        R:{dungeon.right}
-              """)
-        """
-        # DFS left first:
-        if dungeon.left is not None:
-            show(dungeon.left)
-            if dungeon.right is not None:
-                show(dungeon.right)
-        """
 
     fileDAttente = Queue()
-    print(fileDAttente)
+    fileDAttente.enfile((0, dungeon)) # indice, valeur
+    resultat = 0
 
-    fileResultat = Queue()
-    print(fileResultat)
+    while not fileDAttente.est_vide():
 
-    valeurActuel = dungeon
-    indiceActuel = 0
-    print(indiceActuel, valeurActuel)
-
-    while True:
-
-        # time.sleep(3)
-
-        show(valeurActuel)
-        print(valeurActuel.est_mort())
+        indiceActuel, valeurActuel = fileDAttente.defile()
+        if valeurActuel.left is not None:
+            fileDAttente.enfile((indiceActuel+1, valeurActuel.left))
+        if valeurActuel.right is not None:
+            fileDAttente.enfile((indiceActuel+1, valeurActuel.right))
 
         if valeurActuel.est_mort():
-            fileResultat.enfile((indiceActuel, valeurActuel))
+            resultat = valeurActuel.msg
 
-        print(fileResultat)
-
-        fileDAttente.enfile((indiceActuel+1, valeurActuel.left))
-        fileDAttente.enfile((indiceActuel+1, valeurActuel.right))
-        indiceActuel, valeurActuel = fileDAttente.defile()
+    return resultat
 
 
 def diehard_left(dungeon:Node):
     """ Renvoie cette fois un tuple(nombre d'actions, message) pour la mort
         "le plus tard possible", mais cette fois, le plus à GAUCHE de l'arbre.
     """
-    raise NotImplementedError('TODO')
+    fileDAttente = Queue()
+    fileDAttente.enfile((0, dungeon))  # indice, valeur
+    resultat = 0
 
+    while not fileDAttente.est_vide():
 
+        indiceActuel, valeurActuel = fileDAttente.defile()
+        if valeurActuel.right is not None:
+            fileDAttente.enfile((indiceActuel + 1, valeurActuel.right))
+        if valeurActuel.left is not None:
+            fileDAttente.enfile((indiceActuel + 1, valeurActuel.left))
 
+        if valeurActuel.est_mort():
+            resultat = valeurActuel.msg
 
-
-
-
-
-
-
-
-
+    return resultat
 
 
 def dfs_winner(dungeon:Node):
@@ -277,15 +257,27 @@ def dfs_winner(dungeon:Node):
         @dungeon: (Node) arbre de décision du jeu
         @return:  (str) message du noeud victorieux.
     """
-    raise NotImplementedError('TODO')
+    def show(dungeon):
+        print(f"""
+        {dungeon.value}
+        {dungeon.msg}
+        L:{dungeon.left}
+        R:{dungeon.right}
+              """)
 
+    fileDAttente = Queue()
+    fileDAttente.enfile(dungeon)
 
+    while not fileDAttente.est_vide():
 
+        noeudActuel = fileDAttente.defile()
+        if noeudActuel.left is not None:
+            fileDAttente.enfile(noeudActuel.left)
+        if noeudActuel.right is not None:
+            fileDAttente.enfile(noeudActuel.right)
 
-
-
-
-
+        if noeudActuel.est_victorieux():
+            return noeudActuel.msg
 
 
 def dfs_winner_rec(node:Node):
@@ -297,10 +289,38 @@ def dfs_winner_rec(node:Node):
         @dungeon: (Node) arbre de décision du jeu
         @return:  (str)  message victorieux
     """
-    raise NotImplementedError('TODO')
+    # DFS ITERATIF
 
+    # fileDAttente = Queue()
+    # fileDAttente.enfile(dungeon)
+    #
+    # while not fileDAttente.est_vide():
+    #
+    #     noeudActuel = fileDAttente.defile()
+    #     if noeudActuel.left is not None:
+    #         fileDAttente.enfile(noeudActuel.left)
+    #     if noeudActuel.right is not None:
+    #         fileDAttente.enfile(noeudActuel.right)
+    #
+    #     if noeudActuel.est_victorieux():
+    #         return noeudActuel.msg
 
+    # DFS RECURSIF
 
+    # cas de base
+    if node.est_victorieux():
+        return node.msg
+
+    # cas recursif
+    if node.left is not None:
+        nL = dfs_winner_rec(node.left)
+        print(nL)
+        return nL
+
+    if node.right is not None:
+        nR = dfs_winner_rec(node.right)
+        print(nR)
+        return nR
 
 
 
