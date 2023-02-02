@@ -1,0 +1,6 @@
+ex 3
+
+1) on travaille avec des méthodes d'une classe => l'instance ("self")
+doit exister pour pouvoir les utiliser, or None (l'arbre vide !) n'a
+pas ces méthodes
+
