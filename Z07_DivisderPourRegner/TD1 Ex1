@@ -1,0 +1,18 @@
+TD1 Ex1
+
+1) longueur du tableau out sera egal a la longueur
+du tableau a et du tableau b
+out = [ None for _ in range( len(a) + len(b) ) ]
+
+2)
+i = 4
+j = 2
+
+3) la prochaine valeur assigner dans le tableau
+sera 8. Avec une boucle for qu'on repete len(a)+len(b) fois
+
+5) coût recursif temps:
+T tri_fusion (N) = T diviser + T regner + T combiner
+                 = T partage (N) + 2 T tri_fusion (N/2) + T fusion (N)
+                 = O(N) + 2 T tri_fusion (N/2) + O(N)
+                 = 2 T tri_fusion (N/2) + O(N)
