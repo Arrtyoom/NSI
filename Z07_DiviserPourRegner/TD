@@ -1,0 +1,79 @@
+TD Ex1
+
+1) longueur du tableau out sera egal a la longueur
+du tableau a et du tableau b
+out = [ None for _ in range( len(a) + len(b) ) ]
+
+2)
+i = 4
+j = 2
+
+3) la prochaine valeur assigner dans le tableau
+sera 8. Avec une boucle for qu'on repete len(a)+len(b) fois
+
+5) coût recursif temps:
+T tri_fusion (N) = T diviser + T regner + T combiner
+                 = T partage (N) + 2 T tri_fusion (N/2) + T fusion (N)
+                 = O(N) + 2 T tri_fusion (N/2) + O(N)
+                 = 2 T tri_fusion (N/2) + O(N)
+
+TD Ex2
+
+1) les 3 fonctions lèvent une erreur (IndexError) car si la liste
+qui leur ai donné est vide elles ne peuvent pas renvoyer lst[0]
+
+2) la fonction min a une complixité en temps de O(N) car elle
+parcours une fois l'entiereté de la boucle
+
+3) dans min_rec1 couper on slice "lst[1:]" et pour combiner on garde
+le plus grand entre a et b "a if a <= b else b"
+dans inner_min2 on coupe quand a on change d'index "i+1" et on combine
+lorsque qu'on trouve une valeur plus petite que 'min_v' "min_v = lst[i]"
+
+4) min_rec1 :
+T min_rec1 (N) = T couper + T regner + T combiner
+               = T slice (N-1) + T min_rec1 (N-1 /* N-1 a cause du couper */) + T test (1)
+               = O(N) + T(N) + O(1)
+               = T(N) + O(N)
+               = O(N)
+
+inner_min2 :
+T inner_min2 (N) = T couper + T regner + T combiner
+                 = T indice (1) + T inner_min2 (N) + T attribution (1)
+                 = O(1) + T(N) + O(1)
+                 = T(N)
+
+5) on utilise la cas de base "len(lst) <= 1" et on renvoie le dernier nombre
+
+6) gauche = [8,2,3,4,6], droite = [5,0,58,9,2]
+regner vas continuer de diviser les listes par 2 :
+[8] [2] [3] [4] [6] [5] [0] [58] [9] [2]
+combiner va comparer 2 resultat et va renvoyer le plus petit des 2, ex:
+[8] [2] => [2]
+a la fin de toute les operation le resuleta sera 0
+
+7)
+    [8,2,3,4,6,5,0,58,9,2]
+      /                  \
+[8,2,3,4,6]           [5,0,58,9,2]
+  /        \            /      \
+[8,2]    [3,4,6]      [5,0]   [58,9,2]
+ /   \    /   \       /  \     /  \
+[8] [2] [3] [4,6]   [5] [0] [58] [9,2]
+ |   |   |   /  \    |   |    |   /  \
+[8] [2] [3] [4] [6] [5] [0] [58] [9] [2]
+ \   /   \   /   \   /   \   /    \   /
+  [2]     [3]     [5]     [0]      [2]
+    \     /         \     /         |
+      [2]             [0]          [2]
+         \           /              |
+               [0]                 [2]
+                  \                /
+                          [0]
+
+8) T min_dpr (N) = T couper + T regner + T combiner
+                 = 2 T diviser (N/2) + T min_dpr (N) + T comparer (1)
+                 = 2 T(N/2) + T(N) + O(1)
+                 = O(N)
+
+9)
